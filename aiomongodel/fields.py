@@ -633,6 +633,8 @@ class DecimalField(NumberField):
     def to_mongo(self, value):
         if value is None:
             return None
+        if isinstance(value, Decimal128):
+            return Decimal128(value.to_decimal())
         return Decimal128(value)
 
     def from_mongo(self, value):
