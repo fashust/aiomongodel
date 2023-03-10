@@ -4,7 +4,7 @@ import re
 from setuptools import setup, find_packages
 
 
-install_requires = ['motor>=2.0,<3.0']
+install_requires = ['motor==3.1.1']
 
 
 tests_require = ['pytest']
